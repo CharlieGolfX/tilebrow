@@ -1,0 +1,8 @@
+Electron based
+-No top bar, frameless window
+-function as a web browser
+    -Browser tab functionality
+    -Each tab is added as a tiled window within the application, the same way a twm window is tiled
+using shortcuts that do not interfere with the browser's own shortcuts or OS shortcuts
+    -tabs can be resized, moved, created and closed using keyboard shortcuts
+no URL bar or similar, the user can only navigate to a URL by opening a new tab and entering the URL in the address bar of that tab

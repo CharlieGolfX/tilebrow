@@ -1,0 +1,38 @@
+{
+  "name": "tilebrow",
+  "version": "0.1.0",
+  "description": "Electron browser with tilable tabs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:linux": "electron-builder --linux",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.tilebrow.app",
+    "productName": "tilebrow",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^42.0.0",
+    "electron-builder": "^26.15.3"
+  }
+}
