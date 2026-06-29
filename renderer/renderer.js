@@ -239,6 +239,12 @@ function createTileDOM(id) {
   webview.setAttribute("partition", "persist:default");
   webview.setAttribute("allowpopups", "");
 
+  // Register this webview's guest WebContents with the main process so that
+  // before-input-event fires for shortcuts while the webview has focus.
+  webview.addEventListener("did-attach", () => {
+    window.tilebrow.registerWebview(webview.getWebContentsId());
+  });
+
   // Address-bar overlay
   const bar = document.createElement("div");
   bar.className = "address-bar";

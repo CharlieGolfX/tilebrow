@@ -93,6 +93,7 @@ Outputs `dist/tilebrow-*-Setup.exe` (NSIS installer).
 ## Keyboard shortcuts
 
 All shortcuts use the `Ctrl+Alt` prefix to avoid conflicts with website shortcuts (`Ctrl+T`, `Ctrl+L`, …) and OS shortcuts (`Cmd+…` on macOS).
+Shortcuts are handled via `before-input-event` rather than a global keyboard grab, so they only fire when tilebrow is focused and work on both X11 and Wayland.
 
 ### Tiles
 
